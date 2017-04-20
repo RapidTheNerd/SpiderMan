@@ -18,3 +18,23 @@ def w(p, d):
     f = open(p, 'w')
     f.write(d)
     f.close()
+
+def a_t_f(p, d):
+    with open(p, 'a') as f:
+        f.write(d + '\n')
+
+def d_f_c(p):
+    with open(p, 'w'):
+        pass
+
+def f_t_s(f_n):
+    result = set()
+    with open(f_n, 'rt') as f:
+        for line in f:
+            result.add(line.replace('\n', ''))
+        return result
+
+def s_t_f(l, f_n):
+    with open(f_n, 'w') as f:
+        for l in sorted(l):
+            f.write(l + "\n")
