@@ -20,3 +20,15 @@ def w():
     while True:
         u = queue.get()
         queue.task_done()
+def c_j():
+    for l in f_t_s(QUEUE_FILE):
+        queue.put(l)
+        queue.join()
+
+def c():
+    q_l = f_t_s(QUEUE_FILE)
+    if len(q_l) > 0:
+        print(str(q_l)) + ' links in queue'
+        c_j()
+
+        c_w()
